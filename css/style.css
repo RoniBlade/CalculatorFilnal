@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #101010;
+    font-size: 15px;
+    color: #FFF;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .header {
+    margin-bottom: 30px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .choose-content {
+    display: flex;
+  }
+
+  .choose-content button:hover {
+    background-color: #333;
+
+
+  }
+
+  .btn-active {
+    padding: 10px 10px;
+    background-color: black;
+    color: #FFF;
+    border: none;
+    border-radius: 1px;
+    text-decoration: none;
+    position: relative;
+  }
+
+  .btn-active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #FFF;
+   }
+  
+
+  .btn {
+    padding: 10px 10px;
+    background-color: black;
+    color: #FFF;
+    border: none;
+    border-radius: 1px;
+    text-decoration: none;
+    position: relative;
+  }
+
+  .sub-content {
+    display: none;
+    margin-top: 20px;
+  }
+
+  .sub-content.active {
+    display: flex;
+
+  }
+
+  .tables {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /*Material Table*/
+
+  table {
+    border-collapse: separate;
+    width: 100%;
+
+    border-radius: 10px; /* Устанавливаем радиус скругления краев */
+    overflow: hidden; /* Обрезаем содержимое таблицы, чтобы края были круглыми */
+  
+    border: 3px solid #303030;
+
+    font-weight: bold;
+}
+
+  th, td {
+    text-align: left;
+    vertical-align: middle;
+    border-radius: 10px 0 0 10px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #3b3131;
+  }
+
+  tr:first-child {
+    background-color: #101010;
+    color: white;
+  }
+
+  .input-column {
+    width: 20%; /* Устанавливаем ширину столбца на 30% от ширины строки */
+    background-color: #222222;
+
+    border-radius: 0 10px 10px 0;
+  } 
+
+
+  img {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+  }
+
+
+  input[type="number"] {
+    width: 100%;
+
+    background-color: #222222;
+    color: white;
+    border: 1px solid #222222;
+    border-radius: 0 10px 10px 0;
+    padding: 5px;
+    transition: border-width 0.2s ease-in-out;
+  }
+
+  input[type="number"]:focus {
+    border-color: #FFF;
+    border-radius: 0 10px 10px 0;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+.column table {
+    margin-bottom: 10px;
+}
+
+/*Grades*/
+
+td.item-grade-1 {
+    color: #b9b9b9;
+}
+
+td.item-grade-2 {
+    color: #91fe02;
+}
+
+td.item-grade-3 {
+    color: #00b5ff;
+}
+
+td.item-grade-4 {
+    color: #ce43fc;
+}
+
+.text-data {
+  margin-left: 10px;
+}
+
+.column-settings {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.column-settings table {
+  margin-bottom: 10px;
+}
+
+/*Checkbox*/
+
+
+.checkbox {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid #34a853;
+  outline: none;
+  cursor: pointer;
+  margin-left: 40%;
+  margin-top: 2%;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+.checkbox:checked {
+  background-color: #34a853;
+  background-image: url(../images/icons/check-mark.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+/*Main Table*/
+.main-table {
+  margin-top: 1em;
+  margin-bottom: 4em;
+}
+
+.main-table table tr td:first-child{
+  width: 30%;
+  
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  white-space: normal;
+
+  border-radius: 10px 0 0 10px;
+}
+
+.main-table table tr td{
+  width: 10%;
+  height: 2000%;
+}
+
+.main-table table tr:first-child td:first-child .text-data{
+  margin-left: 2.65em;
+}
+
+.main-table table tr td{
+  border-radius: 0px;
+}
+
+.main-table table tr td .text-data{
+  vertical-align: middle;
+  margin: 0.5em 0 0.5em 10px;
+}
+
+.main-table table tr td:last-child{
+  border-radius: 0px 10px 10px 0px;
+}
+
+.between {
+  height: 40px;
+  width: 100%;
+
+  background-color: #101010;
+
+  border: 1px solid #303030;
+  border-radius: 10px;
+
+}

@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header"></div>
+    <div class="container">
+        <div class="choose-content">
+            <button id="MATERIALSBtn" onclick="showSubSection('MATERIALS')" class="btn">MATERIALS</button>
+            <button id="ITEMSBtn" onclick="showSubSection('ITEMS')" class="btn">ITEMS</button>
+            <button id="SETTINGSBtn" onclick="showSubSection('SETTINGS')" class="btn">SETTINGS</button>
+        </div>
+        <div id="MATERIALS" class="sub-content">
+            <div class="tables">
+                <div class="column">
+                    <table>
+                        <tr>
+                        <td class="item-grade-1">
+                            <img src="images/smallFish.png" alt="Маленькая картинка">
+                                    Мелкая рыбешка</td>
+                        <td class="input-column"><input type="number" value="0" id="smallFish" oninput="calculationFormula4(); sortTable();"></td>
+                        </tr>
+                        <tr>
+                        <td class="item-grade-2">
+                            <img src="images/redFish.png" alt="Маленькая картинка">
+                                    Красная рыба</td>
+                        <td class="input-column"><input type="number" value="0" id="redFish" oninput="calculationFormula4()"></td>
+                        </tr>
+                        <tr>
+                            <td class="item-grade-2">
+                            <img src="images/naturalPearl.png" alt="Маленькая картинка">
+                                        Крупная жемчужина</td>
+                            <td class="input-column"><input type="number" value="0" id="naturalPearl" oninput="calculationFormula4()"></td>
+                        </tr>
+                        <tr>
+                        <td class="item-grade-3">
+                            <img src="images/solarCarp.png" alt="Маленькая картинка">
+                                    Орейский золотистый карп</td>
+                        <td class="input-column"><input type="number" value="0" id="solarCarp" oninput="calculationFormula4()"></td>
+                        </tr>
+                    </table> 
+                    <table>
+                        <tr>
+                        <td class="item-grade-1">
+                            <img src="images/rawMeat.png" alt="Маленькая картинка">
+                                    Свежее мясо</td>
+                        <td class="input-column"><input type="number" value="0" id="rawMeat" oninput="calculationFormula12()"></td>
+                        </tr>
+                        <tr>
+                        <td class="item-grade-2">
+                            <img src="images/treatedMeat.png" alt="Маленькая картинка">
+                                    Отборное мясо</td>
+                        <td class="input-column"><input type="number" value="0" id="treatedMeat" oninput="calculationFormula12()"></td>
+                        </tr>
+                        <tr>
+                            <td class="item-grade-2">
+                            <img src="images/toughLeather.png" alt="Маленькая картинка">
+                                        Плотная кожа</td>
+                            <td class="input-column"><input type="number" value="0" id="toughLeather" oninput="calculationFormula12(); calculationFormula23();"></td>
+                        </tr>
+                        <tr>
+                            <td class="item-grade-3">
+                            <img src="images/orehaThickMeat.png" alt="Маленькая картинка">
+                                        Свежая орейская вырезка</td>
+                            <td class="input-column"><input type="number" value="0" id="orehaThickMeat" oninput="calculationFormula12()"></td>
+                        </tr>
+                    </table> 
+                    <table>
+                        <tr>
+                        <td class="item-grade-1">
+                            <img src="images/ironOre.png" alt="Маленькая картинка">
+                                    Железная руда</td>
+                        <td class="input-column"><input type="number" value="0" id="ironOre" oninput="calculationFormula28()"></td>
+                        </tr>
+                        <tr>
+                        <td class="item-grade-2">
+                            <img src="images/heavyIronOre.png" alt="Маленькая картинка">
+                                    Отборная железная руда</td>
+                        <td class="input-column"><input type="number" value="0" id="heavyIronOre" oninput="calculationFormula25()"></td>
+                        </tr>
+                        <tr>
+                            <td class="item-grade-3">
+                            <img src="images/strongIronOre.png" alt="Маленькая картинка">
+                                        Истинная железная руда</td>
+                            <td class="input-column"><input type="number" value="0" id="strongIronOre" oninput="calculationFormula20()"></td>
+                        </tr>
+
+                    </table> 
+                </div>       
+                <div class="column">
+                    <table>
+                        <tr>
+                        <td class="item-grade-1">
+                            <img src="images/shyWildFlower.png" alt="Маленькая картинка">
+                                    Жухлый полевой цветок</td>
+                        <td class="input-column"><input type="number" value="0" id="shyWildFlower" oninput="calculationFormula1()"></td>
+                        </tr>
+                        <tr>
+                        <td class="item-grade-2">
+                            <img src="images/wildFlower.png" alt="Маленькая картинка">
+                                    Свежий полевой цветок</td>
+                        <td class="input-column"><input type="number" value="0" id="wildFlower" oninput="calculationFormula1()"></td>
+                        </tr>
+                        <tr>
+                            <td class="item-grade-3">
+                            <img src="images/brightWildFlower.png" alt="Маленькая картинка">
+                                        Пышный полевой цветок</td>
+                            <td class="input-column"><input type="number" value="0" id="brightWildFlower" oninput="calculationFormula1()"></td>
+                        </tr>
+
+                    </table> 
+                    <table>
+                        <tr>
+                        <td class="item-grade-1">
+                            <img src="images/crudeMushroom.png" alt="Маленькая картинка">
+                                    Гнилой гриб</td>
+                        <td class="input-column"><input type="number" value="0" id="crudeMushroom" oninput="calculationFormula16()"></td>
+                        </tr>
+                        <tr>
+                        <td class="item-grade-2">
+                            <img src="images/freshMushroom.png" alt="Маленькая картинка">
+                                    Свежий гриб</td>
+                        <td class="input-column"><input type="number" value="0" id="freshMushroom" oninput="calculationFormula16()"></td>
+                        </tr>
+                        <tr>
+                            <td class="item-grade-3">
+                            <img src="images/exquisiteMushroom.png" alt="Маленькая картинка">
+                                        Ароматный гриб</td>
+                            <td class="input-column"><input type="number" value="0" id="exquisiteMushroom" oninput="calculationFormula16()"></td>
+                        </tr>
+
+                    </table> 
+                </div>
+                <div class="column">
+                    <table>
+                        <tr>
+                        <td class="item-grade-1">
+                            <img src="images/ancientRelic.png" alt="Маленькая картинка">
+                                    Осколки древней реликвии</td>
+                        <td class="input-column"><input type="number" value="0" id="ancientRelic" oninput="calculationFormula8()"></td>
+                        </tr>
+                        <tr>
+                        <td class="item-grade-2">
+                            <img src="images/rareRelic.png" alt="Маленькая картинка">
+                                    Старинная каменная печать</td>
+                        <td class="input-column"><input type="number" value="0" id="rareRelic" oninput="calculationFormula8(); calculationFormula16(); calculationFormula18();"></td>
+                        </tr>
+                        <tr>
+                            <td class="item-grade-3">
+                            <img src="images/orehaRelic.png" alt="Маленькая картинка">
+                                        Орейская руническая плита</td>
+                            <td class="input-column"><input type="number" value="0" id="orehaRelic" oninput="calculationFormula8()"></td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                        <td class="item-grade-1">
+                            <img src="images/timber.png" alt="Маленькая картинка">
+                                    Обычная древесина</td>
+                        <td class="input-column"><input type="number" value="0"></td>
+                        </tr>
+                        <tr>
+                        <td class="item-grade-2">
+                            <img src="images/tenderTimber.png" alt="Маленькая картинка">
+                            Отборная древесина</td>
+                        <td class="input-column"><input type="number" value="0" id="tenderTimber" oninput="calculationFormula32()"></td>
+                        </tr>
+                        <tr>
+                            <td class="item-grade-3">
+                            <img src="images/sturdyTimber.png" alt="Маленькая картинка">
+                            Крепкие доски</td>
+                            <td class="input-column"><input type="number" value="0" id="sturdyTimber" oninput="calculationFormula18(); calculationFormula19()"></td>
+                        </tr>
+                    </table> 
+                </div>
+            </div>
+        </div>
+        <div id="ITEMS" class="sub-content">
+            <div class="column">
+                <table>
+                    <tr>
+                    <td class="item-grade-3">
+                        <img src="images/items/majorHPPotion.png" alt="Маленькая картинка">
+                                Сильное зелье глинницкой</td>
+                    <td class="input-column"><input type="number" value="0" id="majorHPPotion"></td>
+                    </tr>
+                    <tr>
+                    <td class="item-grade-4">
+                        <img src="images/items/elementalHPPotion.png" alt="Маленькая картинка">
+                                Выдержанное зелье глинницкой</td>
+                    <td class="input-column"><input type="number" value="0" id="elementalHPPotion"  oninput="calculationFormula3()"></td>
+                    </tr>
+                    <tr>
+                        <td class="item-grade-4">
+                        <img src="images/items/splendidElementalHPPotion.png" alt="Маленькая картинка">
+                                    Крепкое зелье глинницкой</td>
+                        <td class="input-column"><input type="number" value="0" id="splendidElementalHPPotion"></td>
+                    </tr>
+                </table> 
+                <table>
+                    <tr>
+                    <td class="item-grade-3">
+                        <img src="images/items/panacea.png" alt="Маленькая картинка">
+                        Монастырская ладанка</td>
+                    <td class="input-column"><input type="number" value="0" id="panacea" oninput="calculationFormula16()"></td>
+                    </tr>
+                    <tr>
+                    <td class="item-grade-3">
+                        <img src="images/items/splendidPanacea.png" alt="Маленькая картинка">
+                        Крупная монастырская ладанка</td>
+                    <td class="input-column"><input type="number" value="0" id="splendidPanacea" oninput="calculationFormula17()"></td>
+                    </tr>
+                    <tr>
+                        <td class="item-grade-4">
+                        <img src="images/items/timeStopPotion.png" alt="Маленькая картинка">
+                        Зелье передышки</td>
+                        <td class="input-column"><input type="number" value="0" id="timeStopPotion" oninput="calculationFormula18()"></td>
+                    </tr>
+                    <tr>
+                        <td class="item-grade-4">
+                        <img src="images/items/stimulant.png" alt="Маленькая картинка">
+                        Мощная эйфория</td>
+                        <td class="input-column"><input type="number" value="0" id="stimulant" oninput="calculationFormula19()"></td>
+                    </tr>
+                    <tr>
+                        <td class="item-grade-4">
+                        <img src="images/items/atropinePotion.png" alt="Маленькая картинка">
+                        Ардопин-Х</td>
+                        <td class="input-column"><input type="number" value="0" id="atropinePotion" oninput="calculationFormula20()"></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                    <td class="item-grade-3">
+                        <img src="images/items/creamySelectedRabbit.png" alt="Маленькая картинка">
+                        Сливочный отборный кролик</td>
+                    <td class="input-column"><input type="number" value="0" id="creamySelectedRabbit" oninput="calculationFormula37()"></td>
+                    </tr>
+                    <tr>
+                    <td class="item-grade-3">
+                        <img src="images/items/stuffedWithApples.png" alt="Маленькая картинка">
+                        Фаршированный яблоками</td>
+                    <td class="input-column"><input type="number" value="0" id="stuffedWithApples" oninput="calculationFormula38()"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="column">
+                <table>
+                    <tr>
+                    <td class="item-grade-3">
+                        <img src="images/items/granades/pheromoneBomb.png" alt="Маленькая картинка">
+                        Феромонная бомба</td>
+                    <td class="input-column"><input type="number" value="0" id="pheromoneBomb" oninput="calculationFormula25()"></td>
+                    </tr>
+                    <tr>
+                    <td class="item-grade-3">
+                        <img src="images/items/granades/destructionBomb.png" alt="Маленькая картинка">
+                        Осколочная бомба</td>
+                    <td class="input-column"><input type="number" value="0" id="destructionBomb"></td>
+                    </tr>
+                    <tr>
+                        <td class="item-grade-3">
+                        <img src="images/items/granades/hardDestructionBomb.png" alt="Маленькая картинка">
+                        Тяжелая осколочная бомба</td>
+                        <td class="input-column"><input type="number" value="0" id="hardDestructionBomb"></td>
+                    </tr>
+                    <tr>
+                        <td class="item-grade-3">
+                        <img src="images/items/granades/whirlwindGrenade.png" alt="Маленькая картинка">
+                        Склянка с усыпляющим</td>
+                        <td class="input-column"><input type="number" value="0" id="whirlwindGrenade" oninput="calculationFormula28()"></td>
+                    </tr>
+                    <tr>
+                        <td class="item-grade-3">
+                        <img src="images/items/granades/flashbangGrenade.png" alt="Маленькая картинка">
+                        Светошумовая граната</td>
+                        <td class="input-column"><input type="number" value="0" id="flashbangGrenade" oninput="calculationFormula29()"></td>
+                    </tr>
+                    <tr>
+                        <td class="item-grade-3">
+                        <img src="images/items/granades/corrosionGrenade.png" alt="Маленькая картинка">
+                        Коррозионная граната</td>
+                        <td class="input-column"><input type="number" value="0" id="corrosionGrenade" oninput="calculationFormula30()"></td>
+                    </tr>
+                    <tr>
+                        <td class="item-grade-3">
+                        <img src="images/items/granades/capacitiveCorrosionGrenade.png" alt="Маленькая картинка">
+                        Емкостная коррозионная граната</td>
+                        <td class="input-column"><input type="number" value="0" id="capacitiveCorrosionGrenade" oninput="calculationFormula31()"></td>
+                    </tr>
+                    <tr>
+                        <td class="item-grade-3">
+                        <img src="images/items/granades/highExplosiveGrenade.png" alt="Маленькая картинка">
+                        Фугасная граната</td>
+                        <td class="input-column"><input type="number" value="0" id="highExplosiveGrenade" oninput="calculationFormula32()"></td>
+                    </tr>
+                    <tr>
+                        <td class="item-grade-3">
+                        <img src="images/items/granades/fragmentationGrenade.png" alt="Маленькая картинка">
+                        Осколочная граната</td>
+                        <td class="input-column"><input type="number" value="0" id="fragmentationGrenade" oninput="calculationFormula33()"></td>
+                    </tr>
+                    <tr>
+                        <td class="item-grade-3">
+                        <img src="images/items/granades/improvedFragmentationGrenade.png" alt="Маленькая картинка">
+                        Улучшенная сколочная граната</td>
+                        <td class="input-column"><input type="number" value="0" id="improvedFragmentationGrenade" oninput="calculationFormula34()"></td>
+                    </tr>
+                    <tr>
+                        <td class="item-grade-3">
+                        <img src="images/items/granades/theSamumBomb.png" alt="Маленькая картинка">
+                        Бомба "Самум"</td>
+                        <td class="input-column"><input type="number" value="0" id="theSamumBomb" oninput="calculationFormula35()"></td>
+                    </tr>
+                    <tr>
+                        <td class="item-grade-3">
+                        <img src="images/items/granades/frostGrenade.png" alt="Маленькая картинка">
+                        Криогенная граната</td>
+                        <td class="input-column"><input type="number" value="0" id="frostGrenade" oninput="calculationFormula36()"></td>
+                    </tr>
+                </table> 
+            </div>
+            <div class="column">
+                <table>
+                    <tr>
+                    <td class="item-grade-3">
+                        <img src="images/items/capeQuick.png" alt="Маленькая картинка">
+                        Накидка прыти</td>
+                    <td class="input-column"><input type="number" value="0" id="capeQuick" oninput="calculationFormula22()"></td>
+                    </tr>
+                    <tr>
+                    <td class="item-grade-3">
+                        <img src="images/items/Al'jadan's Cape.png" alt="Маленькая картинка">
+                        Накидка Аль'Джадана</td>
+                    <td class="input-column"><input type="number" value="0" id="Al jadan Cape" oninput="calculationFormula23()"></td>
+                    </tr>
+                    <tr>
+                        <td class="item-grade-4">
+                        <img src="images/items/ghostlyCapeSpeed.png" alt="Маленькая картинка">
+                        Призрачная накидка прыти</td>
+                        <td class="input-column"><input type="number" value="0" id="ghostlyCapeSpeed" oninput="calculationFormula24()"></td>
+                    </tr>
+                    <tr>
+                        <td class="item-grade-3">
+                        <img src="images/items/prayer.png" alt="Маленькая картинка">
+                        Молитва</td>
+                        <td class="input-column"><input type="number" value="0" id="prayer" oninput="calculationFormula21()"></td>
+                    </tr>
+                </table> 
+                <table>
+                    <tr>
+                    <td class="item-grade-2">
+                        <img src="images/items/smallArctusCrystal.png" alt="Маленькая картинка">
+                        Малый кристалл Арктуса</td>
+                    <td class="input-column"><input type="number" value="0" id="smallArctusCrystal" oninput="calculationFormula4()"></td>
+                    </tr>
+                    <tr>
+                    <td class="item-grade-3">
+                        <img src="images/items/arctusCrystal.png" alt="Маленькая картинка">
+                        Кристалл Арктуса</td>
+                    <td class="input-column"><input type="number" value="0" id="arctusCrystal"></td>
+                    </tr>
+                    <tr>
+                        <td class="item-grade-4">
+                        <img src="images/items/largeArctusCrystal.png" alt="Маленькая картинка">
+                        Крупный кристалл Арктуса</td>
+                        <td class="input-column"><input type="number" value="0" id="largeArctusCrystal"></td>
+                    </tr>
+                    <tr>
+                        <td class="item-grade-4">
+                        <img src="images/items/hugeArctusCrystal.png" alt="Маленькая картинка">
+                        Огромный кристалл Арктуса</td>
+                        <td class="input-column"><input type="number" value="0" id="hugeArctusCrystal"></td>
+                    </tr>
+                </table> 
+            </div>
+        </div>
+        <div id="SETTINGS" class="sub-content">
+            <div class="column-settings">
+                <table>
+                    <tr>
+                    <td><div class="text-data">Стоимость изготовления предметов</div></td>
+                    <td class="input-column"><input type="number" value="0" id="craftingCost" oninput="reCalcSet()"></td>
+                    </tr>
+                    <tr>
+                    <td><div class="text-data">Шанс идеального результата</div></td>
+                    <td class="input-column"><input type="number" value="0" id="chancePerfect" oninput="reCalcSet()"></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-data">Время изготовление предметов</div></td>
+                        <td class="input-column"><input type="number" value="0" id="reducedProductionB" oninput="reCalcSet()"></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-data">Расход энергии</div></td>
+                        <td class="input-column"><input type="number" value="0" oninput="reCalcSet()"></td>
+                    </tr>
+                </table> 
+                <table>
+                    <tr>
+                    <td><div class="text-data">Замена красной рыбы на Крупные жемчужины</div></td>
+                    <td class="input-column"><input id="t1" type="checkbox" class="checkbox changeRedFishOnPearls" id="changeRedFishOnPearls" onchange="calculationFormula4()"></td>
+                    </tr>
+                    <tr>
+                    <td><div class="text-data">Замена красной рыбы на Орейского золотого карпа</div></td>
+                    <td class="input-column"><input type="checkbox" class="checkbox changeRedFishOnOrehaGold" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-data">Замена отборного мяса на Плотную кожу</div></td>
+                        <td class="input-column"><input type="checkbox" class="checkbox changeTreatedMeatOnLeather" value="0" onchange="calculationFormula12()"></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-data">Заменая отборного мяса на Свежую орейскую вырезку</div></td>
+                        <td class="input-column"><input type="checkbox" class="checkbox changeTreatedMeatOnOrehaThickMeat" value="0" onchange="calculationFormula12()"></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-data">Автоматическая замена всех ресурсов</div></td>
+                        <td class="input-column"><input type="checkbox" class="checkbox" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-data">Скрыть материал/стоимость изготовления</div></td>
+                        <td class="input-column"><input type="checkbox" class="checkbox" value="0"></td>
+                    </tr>
+                </table> 
+            </div>
+        
+        <div class="column-settings">
+            <table>
+                <tr>
+                <td><div class="text-data">Стоимость изготовления предметов (прочее)</div></td>
+                <td class="input-column"><input type="number" value="0" id="craftingCostO" oninput="reCalcSet()"></td>
+                </tr>
+                <tr>
+                <td><div class="text-data">Шанс идеального результата (прочее)</div></td>
+                <td class="input-column"><input type="number" value="0" id="chancePerfectO" oninput="reCalcSet()"></td>
+                </tr>
+                <tr>
+                    <td><div class="text-data">Время изготовление предметов(прочее)</div></td>
+                    <td class="input-column"><input type="number" value="0" id="reducedProductionO" oninput="reCalcSet()"></td>
+                </tr>
+                <tr>
+                    <td><div class="text-data">Расход энергии (прочее)</div></td>
+                    <td class="input-column"><input type="number" value="0" oninput="reCalcSet()"></td>
+                </tr>
+            </table> 
+            <table>
+                <tr>
+                <td><div class="text-data">Стоимость изготовления предметов (боеприпасы)</div></td>
+                <td class="input-column"><input type="number" value="0" id="craftingCostA" oninput="reCalcSet()"></td>
+                </tr>
+                <tr>
+                <td><div class="text-data">Шанс идеального результата (боеприпасы)</div></td>
+                <td class="input-column"><input type="number" value="0" id="chancePerfectA" oninput="reCalcSet()"></td>
+                </tr>
+                <tr>
+                    <td><div class="text-data">Время изготовление предметов (боеприпасы)</div></td>
+                    <td class="input-column"><input type="number" value="0" id="reducedProductionA" oninput="reCalcSet()"></td>
+                </tr>
+                <tr>
+                    <td><div class="text-data">Расход энергии (боеприпасы)</div></td>
+                    <td class="input-column"><input type="number" value="0" oninput="reCalcSet()"></td>
+                </tr>
+            </table> 
+        </div>
+        </div>
+
+
+        <div class="main-table">
+            <table>
+                <tr>
+                    <td><div class="text-data">Наименование</div></td>
+                    <td><div class="text-data">Выгода</div></td>
+                    <td><div class="text-data">Стоимость</div></td>
+                    <td><div class="text-data">30 крафтов</div></td>
+                    <td><div class="text-data">40 крафтов</div></td>
+                    <td><div class="text-data">Профит в час</div></td>
+                </tr>
+                <tr>
+                    <td class="item-grade-3"><div class="text-data">
+                        <img src="images/items/majorHPPotion.png" alt="">
+                        Сильное зелье глинницкой</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-1">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-1">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-1">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-1">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-1">
+                        0</div></td>
+                </tr>
+                <tr>
+                    <td class="item-grade-4"><div class="text-data">
+                        <img src="images/items/majorHPPotion.png" alt="">
+                        Выдержанное зелье глинницкой</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-2">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-2">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-2">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-2">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-2">
+                        0</div></td>
+                </tr>
+                <tr>
+                    <td class="item-grade-4"><div class="text-data">
+                        <img src="images/items/splendidElementalHPPotion.png">
+                        Крепленое зелье глинницкой</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-3">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-3">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-3">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-3">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-3">
+                        0</div></td>
+                </tr>
+
+                <tr>
+                    <td class="item-grade-2"><div class="text-data">
+                        <img src="images/items/fish.png">
+                        <img src="images/items/smallArctusCrystal.png">
+                        Малый кристалл Арктуса</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-4">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-4">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-4">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-4">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-4">
+                        0</div></td>
+                </tr>
+                <tr>
+                    <td class="item-grade-3"><div class="text-data">
+                        <img src="images/items/fish.png">
+                        <img src="images/items/arctusCrystal.png">
+                        Кристалл Арктуса</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-5">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-5">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-5">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-5">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-5">
+                        0</div></td>
+                </tr>
+                <tr>
+                    <td class="item-grade-4"><div class="text-data">
+                        <img src="images/items/fish.png">
+                        <img src="images/items/largeArctusCrystal.png">
+                        Крупный кристалл Арктуса</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-6">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-6">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-6">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-6">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-6">
+                        0</div></td>
+                </tr>
+                <tr>
+                    <td class="item-grade-4"><div class="text-data">
+                        <img src="images/items/fish.png">
+                        <img src="images/items/hugeArctusCrystal.png">
+                        Огромный кристалл Арктуса</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-7">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-7">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-7">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-7">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-7">
+                        0</div></td>
+                </tr>
+
+                <tr>
+                    <td class="item-grade-2"><div class="text-data">
+                        <img src="images/items/crystals.png">
+                        <img src="images/items/smallArctusCrystal.png">
+                        Малый кристалл Арктуса</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-8">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-8">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-8">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-8">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-8">
+                        0</div></td>
+                </tr>
+                <tr>
+                    <td class="item-grade-3"><div class="text-data">
+                        <img src="images/items/crystals.png">
+                        <img src="images/items/arctusCrystal.png">
+                        Кристалл Арктуса</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-9">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-9">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-9">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-9">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-9">
+                        0</div></td>
+                </tr>
+                <tr>
+                    <td class="item-grade-4"><div class="text-data">
+                        <img src="images/items/crystals.png">
+                        <img src="images/items/largeArctusCrystal.png">
+                        Крупный кристалл Арктуса</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-10">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-10">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-10">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-10">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-10">
+                        0</div></td>
+                </tr>
+                <tr>
+                    <td class="item-grade-4"><div class="text-data">
+                        <img src="images/items/crystals.png">
+                        <img src="images/items/hugeArctusCrystal.png">
+                        Огромный кристалл Арктуса</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-11">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-11">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-11">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-11">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-11">
+                        0</div></td>
+                </tr>
+                
+                <tr>
+                    <td class="item-grade-2"><div class="text-data">
+                        <img src="images/items/meat1.png">
+                        <img src="images/items/smallArctusCrystal.png">
+                        Малый кристалл Арктуса</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-12">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-12">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-12">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-12">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-12">
+                        0</div></td>
+                </tr>
+                <tr>
+                    <td class="item-grade-3"><div class="text-data">
+                        <img src="images/items/meat2.png">
+                        <img src="images/items/arctusCrystal.png">
+                        Кристалл Арктуса</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-13">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-13">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-13">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-13">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-13">
+                        0</div></td>
+                </tr>
+                <tr>
+                    <td class="item-grade-4"><div class="text-data">
+                        <img src="images/items/meat3.png">
+                        <img src="images/items/largeArctusCrystal.png">
+                        Крупный кристалл Арктуса</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-14">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-14">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-14">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-14">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-14">
+                        0</div></td>
+                </tr>
+                <tr>
+                    <td class="item-grade-4"><div class="text-data">
+                        <img src="images/items/meat3.png">
+                        <img src="images/items/hugeArctusCrystal.png">
+                        Огромный кристалл Арктуса</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-15">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-15">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-15">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-15">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-15">
+                        0</div></td>
+                </tr>
+
+                <tr>
+                    <td class="item-grade-3"><div class="text-data">
+                        <img src="images/items/panacea.png">
+                        Монастырская ладанка</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-16">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-16">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-16">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-16">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-16">
+                        0</div></td>
+                </tr>
+                <tr>
+                    <td class="item-grade-3"><div class="text-data">
+                        <img src="images/items/splendidPanacea.png">
+                        Крупная монастырская ладанка</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-17">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-17">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-17">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-17">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-17">
+                        0</div></td>
+                </tr>
+                <tr>
+                    <td class="item-grade-4"><div class="text-data">
+                        <img src="images/items/timeStopPotion.png">
+                        Зелье передышки</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-18">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-18">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-18">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-18">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-18">
+                        0</div></td>
+                </tr>
+                <tr>
+                    <td class="item-grade-4"><div class="text-data">
+                        <img src="images/items/stimulant.png">
+                        Мощная эйфория</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-19">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-19">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-19">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-19">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-19">
+                        0</div></td>
+                </tr>
+                <tr>
+                    <td class="item-grade-4"><div class="text-data">
+                        <img src="images/items/atropinePotion.png">
+                        Ардопин-Х</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-20">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-20">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-20">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-20">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-20">
+                        0</div></td>
+                </tr>
+                <tr>
+                    <td class="item-grade-3"><div class="text-data">
+                        <img src="images/items/prayer.png">
+                        Молитва</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-21">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-21">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-21">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-21">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-21">
+                        0</div></td>
+                </tr>
+                <tr>
+                    <td class="item-grade-3"><div class="text-data">
+                        <img src="images/items/capeQuick.png">
+                        Накидка прыти</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-22">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-22">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-22">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-22">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-22">
+                        0</div></td>
+                </tr>
+                <tr>
+                    <td class="item-grade-3"><div class="text-data">
+                        <img src="images/items/Al'jadan's Cape.png">
+                        Накидка Аль Джадана</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-23">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-23">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-23">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-23">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-23">
+                        0</div></td>
+                </tr>
+                <tr>
+                    <td class="item-grade-4"><div class="text-data">
+                        <img src="images/items/ghostlyCapeSpeed.png">
+                        Призрачная накидка прыти</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-24">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-24">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-24">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-24">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-24">
+                        0</div></td>
+                </tr>
+
+                <tr>
+                    <td class="item-grade-3"><div class="text-data">
+                        <img src="images/items/granades/pheromoneBomb.png">
+                        Феромонная бомба</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-25">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-25">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-25">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-25">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-25">
+                        0</div></td>
+                </tr>
+                <tr>
+                    <td class="item-grade-3"><div class="text-data">
+                        <img src="images/items/granades/destructionBomb.png">
+                        Осколочная бомба</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-26">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-26">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-26">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-26">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-26">
+                        0</div></td>
+                </tr>
+                <tr>
+                    <td class="item-grade-3"><div class="text-data">
+                        <img src="images/items/granades/hardDestructionBomb.png">
+                        Тяжелая осколочная бомба</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-27">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-27">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-27">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-27">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-27">
+                        0</div></td>
+                </tr>
+                <tr>
+                    <td class="item-grade-3"><div class="text-data">
+                        <img src="images/items/granades/whirlwindGrenade.png">
+                        Склянка с усыпляющим</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-28">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-28">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-28">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-28">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-28">
+                        0</div></td>
+                </tr>
+                <tr>
+                    <td class="item-grade-3"><div class="text-data">
+                        <img src="images/items/granades/flashbangGrenade.png">
+                        Светошумовая граната</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-29">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-29">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-29">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-29">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-29">
+                        0</div></td>
+                </tr>
+                <tr>
+                    <td class="item-grade-3"><div class="text-data">
+                        <img src="images/items/granades/corrosionGrenade.png">
+                        Коррозионная граната</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-30">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-30">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-30">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-30">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-30">
+                        0</div></td>
+                </tr>
+                <tr>
+                    <td class="item-grade-3"><div class="text-data">
+                        <img src="images/items/granades/capacitiveCorrosionGrenade.png">
+                        Ёмкостная коррозионнна граната</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-31">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-31">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-31">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-31">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-31">
+                        0</div></td>
+                </tr>
+                <tr>
+                    <td class="item-grade-3"><div class="text-data">
+                        <img src="images/items/granades/highExplosiveGrenade.png">
+                        Фугасная граната</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-32">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-32">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-32">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-32">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-32">
+                        0</div></td>
+                </tr>
+                <tr>
+                    <td class="item-grade-3"><div class="text-data">
+                        <img src="images/items/granades/fragmentationGrenade.png">
+                        Осколочная граната</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-33">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-33">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-33">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-33">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-33">
+                        0</div></td>
+                </tr>
+                <tr>
+                    <td class="item-grade-3"><div class="text-data">
+                        <img src="images/items/granades/improvedFragmentationGrenade.png">
+                        Улучшенная осколочная граната</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-34">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-34">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-34">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-34">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-34">
+                        0</div></td>
+                </tr>
+                <tr>
+                    <td class="item-grade-3"><div class="text-data">
+                        <img src="images/items/granades/theSamumBomb.png">
+                        Бомба "Самум"</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-35">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-35">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-35">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-35">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-35">
+                        0</div></td>
+                </tr>
+                <tr>
+                    <td class="item-grade-3"><div class="text-data">
+                        <img src="images/items/granades/frostGrenade.png">
+                        Криогенная граната</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-36">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-36">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-36">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-36">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-36">
+                        0</div></td>
+                </tr>
+
+                <tr>
+                    <td class="item-grade-3"><div class="text-data">
+                        <img src="images/items/creamySelectedRabbit.png">
+                        Сливочный отборный кролик</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-37">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-37">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-37">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-37">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-37">
+                        0</div></td>
+                </tr>
+                <tr>
+                    <td class="item-grade-3"><div class="text-data">
+                        <img src="images/items/stuffedWithApples.png">
+                        Фаршированный яблоками</div></td>
+                    <td><div class="text-data" id="profitMHPPotion-38">
+                        0</div></td>
+                        <td><div class="text-data" id="costMHPPotion-38">
+                        0</div></td>
+                    <td><div class="text-data" id="30Craft-38">
+                        0</div></td>
+                    <td><div class="text-data" id="40Craft-38">
+                        0</div></td>
+                    <td><div class="text-data" id="profitPerHour-38">
+                        0</div></td>
+                </tr>
+            </table> 
+
+        </div>
+
+
+    </div>
+
+
+    </div>
+
+
+    <script src="js/sort.js"></script>
+    <script src="js/changeContent.js"></script>
+    <script src="js/calculation.js"></script>
+  </body>
+</html>
