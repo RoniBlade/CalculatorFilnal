@@ -961,11 +961,20 @@ function calculationFormula30() {
 
 function calculationFormula31() { 
   
-  var sumCostCraft = (document.getElementById('heavyIronOre').value*(6/10) + document.getElementById('crudeMushroom').value*(32/100) + document.getElementById('freshMushroom').value*(12/10) + document.getElementById('exquisiteMushroom').value*(4/10) + 16*craftingCostBA) + document.getElementById('exquisiteMushroom')*(2/10) + 16*craftingCostBA
-  var costWithCommision1Item = document.getElementById('corrosionGrenade').value * 0.95
+  var sumCostCraft = (document.getElementById('heavyIronOre').value*(6/10) + document.getElementById('crudeMushroom').value*(32/100) + document.getElementById('freshMushroom').value*(12/10) + document.getElementById('exquisiteMushroom').value*(4/10) + 16*craftingCostBA) + document.getElementById('exquisiteMushroom').value*(2/10) + 16*craftingCostBA
+  var costWithCommision1Item = document.getElementById('capacitiveCorrosionGrenade').value * 0.95
   var costWithCommision1Craft = costWithCommision1Item*2*chancePerfectBO
   var craftsPerHour = (60/(45*reducedProductionBA))*3
   var profit = sumCostCraft*craftsPerHour
+
+  // console.log((document.getElementById('heavyIronOre').value*(6/10) + document.getElementById('crudeMushroom').value*(32/100) + document.getElementById('freshMushroom').value*(12/10) + document.getElementById('exquisiteMushroom').value*(4/10) + 16*craftingCostBA))
+  // console.log(document.getElementById('exquisiteMushroom').value*(2/10) + 16*craftingCostBA)
+
+  // console.log(sumCostCraft)
+  // console.log(costWithCommision1Item)
+  // console.log(costWithCommision1Craft)
+  // console.log(craftsPerHour)
+  // console.log(profit)
 
   doValid('capacitiveCorrosionGrenade')
   
@@ -1192,9 +1201,24 @@ function reCalcSet() {
   doValid("chancePerfect");
   doValid("craftingCostA");
   doValid("chancePerfectA");
+  doValid("reducedProductionB");
+  doValid("craftingCostO");
+  doValid("chancePerfectO");
+  doValid("reducedProductionO");
+  doValid("reducedProductionA");
 
+  
   calculationFormula1()
-  calculationFormula2()
+  calculationFormula4()
+  calculationFormula8()
+  calculationFormula12()
+  calculationFormula16()
+  calculationFormula20()
+  calculationFormula21()
+  calculationFormula30()
+  calculationFormula36()
+
+  
 }
 
 function limitDecimalPlaces(number, decimalPlaces) {
@@ -1232,3 +1256,50 @@ function sortTable() {
     table.appendChild(row);
   });
 }
+
+function toggleCheckboxes(sourceCheckbox) {
+  var checkboxes = document.getElementsByClassName("checkbox");
+
+  if (sourceCheckbox.checked) {
+    // Активировать нужные чекбоксы
+    checkboxes[0].disabled = true;  // changeRedFishOnPearls
+    checkboxes[1].disabled = true;  // changeRedFishOnOrehaGold
+    checkboxes[2].disabled = true;  // changeTreatedMeatOnLeather
+    checkboxes[3].disabled = true;  // changeTreatedMeatOnOrehaThickMeat
+
+    checkboxes[0].checked = true;  // Установить галочку в первом чекбоксе
+    checkboxes[1].checked = true;  // Установить галочку во втором чекбоксе
+    checkboxes[2].checked = true;  // Убрать галочку в третьем чекбоксе
+    checkboxes[3].checked = true;  // Убрать галочку в четвертом чекбоксе
+  
+  } else {
+    // Деактивировать нужные чекбоксы
+    checkboxes[0].disabled = false;  // changeRedFishOnPearls
+    checkboxes[1].disabled = false;  // changeRedFishOnOrehaGold
+    checkboxes[2].disabled = false;  // changeTreatedMeatOnLeather
+    checkboxes[3].disabled = false;  // changeTreatedMeatOnOrehaThickMeat
+
+    checkboxes[0].checked = false;  // Убрать галочку в первом чекбоксе
+    checkboxes[1].checked = false;  // Убрать галочку во втором чекбоксе
+    checkboxes[2].checked = false;  // Установить галочку в третьем чекбоксе
+    checkboxes[3].checked = false;  // Установить галочку в четвертом чекбоксе
+  }
+  reCalcSet()
+
+}
+
+function toggleColumn() {
+  var table = document.getElementsByClassName("main-table")[0];
+  var rows = table.getElementsByTagName("tr");
+
+  for (var i = 0; i < rows.length; i++) {
+    var cells = rows[i].getElementsByTagName("td");
+    if (cells.length > 2) {  // Проверяем, что есть хотя бы 3 столбца в строке
+      cells[2].classList.toggle("hidden-column");
+    }
+  }
+}
+
+
+
+reCalcSet()
