@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
     <div class="header"></div>
     <div class="container">
         <div class="choose-content">
@@ -260,13 +261,13 @@
                     <td class="item-grade-3">
                         <img src="images/items/granades/destructionBomb.png" alt="Маленькая картинка">
                         Осколочная бомба</td>
-                    <td class="input-column"><input type="number" value="0" id="destructionBomb"></td>
+                    <td class="input-column"><input type="number" value="0" id="destructionBomb" oninput="calculationFormula26()"></td>
                     </tr>
                     <tr>
                         <td class="item-grade-3">
                         <img src="images/items/granades/hardDestructionBomb.png" alt="Маленькая картинка">
                         Тяжелая осколочная бомба</td>
-                        <td class="input-column"><input type="number" value="0" id="hardDestructionBomb"></td>
+                        <td class="input-column"><input type="number" value="0" id="hardDestructionBomb" oninput="calculationFormula27()"></td>
                     </tr>
                     <tr>
                         <td class="item-grade-3">
@@ -402,27 +403,27 @@
                 <table>
                     <tr>
                     <td><div class="text-data">Замена красной рыбы на Крупные жемчужины</div></td>
-                    <td class="input-column"><input id="t1" type="checkbox" class="checkbox changeRedFishOnPearls" id="changeRedFishOnPearls" onchange="calculationFormula4()"></td>
+                    <td class="input-column"><input id="t1" type="checkbox" class="checkbox changeRedFishOnPearls" id="changeRedFishOnPearls" onchange="reCalcSet();"></td>
                     </tr>
                     <tr>
                     <td><div class="text-data">Замена красной рыбы на Орейского золотого карпа</div></td>
-                    <td class="input-column"><input type="checkbox" class="checkbox changeRedFishOnOrehaGold" value="0"></td>
+                    <td class="input-column"><input type="checkbox" class="checkbox changeRedFishOnOrehaGold" value="0" onchange="reCalcSet()"></td>
                     </tr>
                     <tr>
                         <td><div class="text-data">Замена отборного мяса на Плотную кожу</div></td>
-                        <td class="input-column"><input type="checkbox" class="checkbox changeTreatedMeatOnLeather" value="0" onchange="calculationFormula12()"></td>
+                        <td class="input-column"><input type="checkbox" class="checkbox changeTreatedMeatOnLeather" value="0" onchange="reCalcSet();"></td>
                     </tr>
                     <tr>
                         <td><div class="text-data">Заменая отборного мяса на Свежую орейскую вырезку</div></td>
-                        <td class="input-column"><input type="checkbox" class="checkbox changeTreatedMeatOnOrehaThickMeat" value="0" onchange="calculationFormula12()"></td>
+                        <td class="input-column"><input type="checkbox" class="checkbox changeTreatedMeatOnOrehaThickMeat" value="0" onchange="reCalcSet();"></td>
                     </tr>
                     <tr>
                         <td><div class="text-data">Автоматическая замена всех ресурсов</div></td>
-                        <td class="input-column"><input type="checkbox" class="checkbox" value="0"></td>
+                        <td class="input-column"><input type="checkbox" class="checkbox" value="0" onclick="toggleCheckboxes(this)"></td>
                     </tr>
                     <tr>
-                        <td><div class="text-data">Скрыть материал/стоимость изготовления</div></td>
-                        <td class="input-column"><input type="checkbox" class="checkbox" value="0"></td>
+                        <td><div class="text-data">Скрыть стоимость изготовления</div></td>
+                        <td class="input-column"><input type="checkbox" class="checkbox" value="0" onchange="toggleColumn()"></td>
                     </tr>
                 </table> 
             </div>
