@@ -268,3 +268,7 @@ td.item-grade-4 {
   border-radius: 10px;
 
 }
+
+.hidden-column {
+  display: none;
+}
