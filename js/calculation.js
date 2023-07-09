@@ -335,14 +335,6 @@ function calculationFormula10() {
   var craftsPerHour = (60/(60*reducedProductionBO))*3
   var profit = sumCostCraft*craftsPerHour
 
-  console.log(document.getElementById('ancientRelic').value*(94/100) + document.getElementById('rareRelic').value*(29/10) + document.getElementById('orehaRelic').value*(16/10) + 250*craftingCostBO)
-  console.log(document.getElementById('ancientRelic').value*(94/100) + " " + document.getElementById('rareRelic').value*(29/10) + " " + document.getElementById('orehaRelic').value*(16/10) + " " + 250*craftingCostBO)
-  console.log('sumCostCraft 1 ' + sumCostCraft)
-  console.log('costWithCommision1Item 1 ' + costWithCommision1Item)
-  console.log('costWithCommision1Craft 1 ' + costWithCommision1Craft)
-  console.log('craftsPerHour 1 ' + craftsPerHour)
-  console.log('profit 1 ' + profit)
-
   document.getElementById("profitMHPPotion-10").innerText = limitDecimalPlaces((costWithCommision1Craft - sumCostCraft), 3);
   document.getElementById("costMHPPotion-10").innerText = limitDecimalPlaces(sumCostCraft, 3);
   document.getElementById("30Craft-10").innerText = limitDecimalPlaces(((costWithCommision1Craft - sumCostCraft)*30), 3);
@@ -627,7 +619,7 @@ function calculationFormula17() {
 
 function calculationFormula18() {
 
-  var sumCostCraft = Math.ceil(document.getElementById('shyWildFlower').value*(40/100) + document.getElementById('wildFlower').value*(20/10) + document.getElementById('brightWildFlower').value*(5/10) + document.getElementById('rareRelic').value*(2/10) + document.getElementById('sturdyTimber').value*(2/10) + 30*craftingCostBA)
+  var sumCostCraft = Math.floor(document.getElementById('shyWildFlower').value*(40/100) + document.getElementById('wildFlower').value*(20/10) + document.getElementById('brightWildFlower').value*(5/10) + document.getElementById('rareRelic').value*(2/10) + document.getElementById('sturdyTimber').value*(2/10) + 30*craftingCostBA)
   var costWithCommision1Item = Math.floor(document.getElementById('timeStopPotion').value * 0.95)
   var costWithCommision1Craft = costWithCommision1Item*3*chancePerfectBA
   var craftsPerHour = (60/(60*reducedProductionBA))*3
@@ -663,7 +655,7 @@ function calculationFormula19() {
   doValid('rareRelic')
   doValid('sturdyTimber')
   doValid('stimulant')
-  
+
   document.getElementById("profitMHPPotion-19").innerText = limitDecimalPlaces((costWithCommision1Craft - sumCostCraft), 3);
   document.getElementById("costMHPPotion-19").innerText = limitDecimalPlaces(sumCostCraft, 3);
   document.getElementById("30Craft-19").innerText = limitDecimalPlaces(((costWithCommision1Craft - sumCostCraft)*30), 3);
@@ -702,7 +694,7 @@ function calculationFormula21() {
 
   var sumCostCraft = Math.ceil(document.getElementById('crudeMushroom').value*(35/100) + document.getElementById('freshMushroom').value*(22/10) + document.getElementById('exquisiteMushroom').value*(5/10) + 16*craftingCostBO)
   var costWithCommision1Item = Math.floor(document.getElementById('prayer').value * 0.95)
-  var costWithCommision1Craft = costWithCommision1Item*3*chancePerfectBA
+  var costWithCommision1Craft = costWithCommision1Item*3*chancePerfectBO
   var craftsPerHour = (60/(60*reducedProductionBA))*3
   var profit = sumCostCraft*craftsPerHour
 
@@ -711,6 +703,14 @@ function calculationFormula21() {
   doValid('exquisiteMushroom')
   doValid('prayer')
   
+  // console.log(document.getElementById('crudeMushroom').value*(35/100) + document.getElementById('freshMushroom').value*(22/10) + document.getElementById('exquisiteMushroom').value*(5/10) + 16*craftingCostBO)
+  // console.log(document.getElementById('crudeMushroom').value*(35/100) + " " + document.getElementById('freshMushroom').value*(22/10) + " " + document.getElementById('exquisiteMushroom').value*(5/10) + " " + 16*craftingCostBO)
+  // console.log('sumCostCraft 1 ' + sumCostCraft)
+  // console.log('costWithCommision1Item 1 ' + costWithCommision1Item)
+  // console.log('costWithCommision1Craft 1 ' + costWithCommision1Craft)
+  // console.log('craftsPerHour 1 ' + craftsPerHour)
+  // console.log('profit 1 ' + profit)
+
   document.getElementById("profitMHPPotion-21").innerText = limitDecimalPlaces((costWithCommision1Craft - sumCostCraft), 3);
   document.getElementById("costMHPPotion-21").innerText = limitDecimalPlaces(sumCostCraft, 3);
   document.getElementById("30Craft-21").innerText = limitDecimalPlaces(((costWithCommision1Craft - sumCostCraft)*30), 3);
@@ -732,6 +732,8 @@ function calculationFormula22() {
   doValid('wildFlower')
   doValid('shyWildFlower')
   doValid('capeQuick')
+
+
   
   document.getElementById("profitMHPPotion-22").innerText = limitDecimalPlaces((costWithCommision1Craft - sumCostCraft), 3);
   document.getElementById("costMHPPotion-22").innerText = limitDecimalPlaces(sumCostCraft, 3);
@@ -744,7 +746,7 @@ function calculationFormula22() {
 
 function calculationFormula23() {
   
-  var sumCostCraft = Math.ceil(document.getElementById('toughLeather').value*(22/100) + document.getElementById('shyWildFlower').value*(35/100) + document.getElementById('wildFlower').value*(22/10) + 16*craftingCostBO)
+  var sumCostCraft = Math.ceil(document.getElementById('toughLeather').value*(22/100) + document.getElementById('crudeMushroom').value*(35/100) + document.getElementById('freshMushroom').value*(22/10) + 16*craftingCostBO)
   var costWithCommision1Item = Math.floor(document.getElementById('Al jadan Cape').value * 0.95)
   var costWithCommision1Craft = costWithCommision1Item*3*chancePerfectBO
   var craftsPerHour = (60/(60*reducedProductionBA))*3
@@ -755,6 +757,15 @@ function calculationFormula23() {
   doValid('wildFlower')
   doValid('Al jadan Cape')
   
+  // console.log(document.getElementById('toughLeather').value*(22/100) + document.getElementById('crudeMushroom').value*(35/100) + document.getElementById('freshMushroom').value*(22/10) + 16*craftingCostBO)
+  // console.log(document.getElementById('toughLeather').value*(22/100) + " " + document.getElementById('crudeMushroom').value*(35/100) + " " + document.getElementById('freshMushroom').value*(22/10) + " " + 16*craftingCostBO)
+  // console.log('sumCostCraft 1 ' + sumCostCraft)
+  // console.log('costWithCommision1Item 1 ' + costWithCommision1Item)
+  // console.log('costWithCommision1Craft 1 ' + costWithCommision1Craft)
+  // console.log('craftsPerHour 1 ' + craftsPerHour)
+  // console.log('profit 1 ' + profit)
+
+
   document.getElementById("profitMHPPotion-23").innerText = limitDecimalPlaces((costWithCommision1Craft - sumCostCraft), 3);
   document.getElementById("costMHPPotion-23").innerText = limitDecimalPlaces(sumCostCraft, 3);
   document.getElementById("30Craft-23").innerText = limitDecimalPlaces(((costWithCommision1Craft - sumCostCraft)*30), 3);
@@ -766,8 +777,8 @@ function calculationFormula23() {
 
 function calculationFormula24() { 
   
-  var sumCostCraft = Math.ceil(document.getElementById('toughLeather').value*(2/100) + document.getElementById('crudeMushroom').value*(35/100) + document.getElementById('freshMushroom').value*(15/10) + document.getElementById('exquisiteMushroom').value*(5/10) + document.getElementById('strongIronOre').value*(2/10) + 16*craftingCostBO)
-  var costWithCommision1Item = Math.floor(document.getElementById('ghostlyCapeSpeed').value * 0.95)
+  var sumCostCraft = Math.floor(document.getElementById('toughLeather').value*(2/100) + document.getElementById('crudeMushroom').value*(35/100) + document.getElementById('freshMushroom').value*(15/10) + document.getElementById('exquisiteMushroom').value*(5/10) + document.getElementById('strongIronOre').value*(2/10) + 16*craftingCostBO)
+  var costWithCommision1Item = Math.ceil(document.getElementById('ghostlyCapeSpeed').value * 0.95)
   var costWithCommision1Craft = costWithCommision1Item*3*chancePerfectBO
   var craftsPerHour = (60/(60*reducedProductionBA))*3
   var profit = sumCostCraft*craftsPerHour
@@ -778,6 +789,14 @@ function calculationFormula24() {
   doValid('exquisiteMushroom')
   doValid('strongIronOre')
   doValid('ghostlyCapeSpeed')
+
+  console.log(document.getElementById('toughLeather').value*(2/100) + document.getElementById('crudeMushroom').value*(35/100) + document.getElementById('freshMushroom').value*(15/10) + document.getElementById('exquisiteMushroom').value*(5/10) + document.getElementById('strongIronOre').value*(2/10) + 16*craftingCostBO)
+  console.log(document.getElementById('toughLeather').value*(2/100) + " " + document.getElementById('crudeMushroom').value*(35/100) + " " + document.getElementById('freshMushroom').value*(15/10) + " " + document.getElementById('exquisiteMushroom').value*(5/10) + " " + document.getElementById('strongIronOre').value*(2/10) + " " + 16*craftingCostBO)
+  console.log('sumCostCraft 1 ' + sumCostCraft)
+  console.log('costWithCommision1Item 1 ' + costWithCommision1Item)
+  console.log('costWithCommision1Craft 1 ' + costWithCommision1Craft)
+  console.log('craftsPerHour 1 ' + craftsPerHour)
+  console.log('profit 1 ' + profit)
   
   document.getElementById("profitMHPPotion-24").innerText = limitDecimalPlaces((costWithCommision1Craft - sumCostCraft), 3);
   document.getElementById("costMHPPotion-24").innerText = limitDecimalPlaces(sumCostCraft, 3);
@@ -1021,13 +1040,21 @@ function calculationFormula34() {
 
 function calculationFormula35() { 
   
-  var sumCostCraft = Math.ceil(document.getElementById('crudeMushroom').value*(24/100) + document.getElementById('freshMushroom').value*(12/10) + document.getElementById('exquisiteMushroom').value*(3/10) + document.getElementById('ironOre').value*(5/100) + 15*craftingCostBA)
+  var sumCostCraft = Math.floor(document.getElementById('crudeMushroom').value*(24/100) + document.getElementById('freshMushroom').value*(12/10) + document.getElementById('exquisiteMushroom').value*(3/10) + document.getElementById('ironOre').value*(5/100) + 15*craftingCostBA)
   var costWithCommision1Item = Math.floor(document.getElementById('theSamumBomb').value * 0.95)
-  var costWithCommision1Craft = costWithCommision1Item*2*chancePerfectBO
+  var costWithCommision1Craft = costWithCommision1Item*3*chancePerfectBA
   var craftsPerHour = (60/(30*reducedProductionBA))*3
   var profit = sumCostCraft*craftsPerHour
 
   doValid('theSamumBomb')
+
+  // console.log(document.getElementById('crudeMushroom').value*(24/100) + document.getElementById('freshMushroom').value*(12/10) + document.getElementById('exquisiteMushroom').value*(3/10) + document.getElementById('ironOre').value*(5/100) + 15*craftingCostBA)
+  // console.log(document.getElementById('crudeMushroom').value*(24/100) + " " + document.getElementById('freshMushroom').value*(12/10) + " " + document.getElementById('exquisiteMushroom').value*(3/10) + " " + document.getElementById('ironOre').value*(5/100) + " " + 15*craftingCostBA)
+  // console.log('sumCostCraft 1 ' + sumCostCraft)
+  // console.log('costWithCommision1Item 1 ' + costWithCommision1Item)
+  // console.log('costWithCommision1Craft 1 ' + costWithCommision1Craft)
+  // console.log('craftsPerHour 1 ' + craftsPerHour)
+  // console.log('profit 1 ' + profit)
   
   document.getElementById("profitMHPPotion-35").innerText = limitDecimalPlaces((costWithCommision1Craft - sumCostCraft), 3);
   document.getElementById("costMHPPotion-35").innerText = limitDecimalPlaces(sumCostCraft, 3);
@@ -1040,9 +1067,9 @@ function calculationFormula35() {
 
 function calculationFormula36() { 
   
-  var sumCostCraft = Math.ceil(document.getElementById('crudeMushroom').value*(24/100) + document.getElementById('freshMushroom').value*(12/10) + document.getElementById('exquisiteMushroom').value*(3/10) + document.getElementById('ironOre').value*(5/100) + 15*craftingCostBA)
+  var sumCostCraft = Math.floor(document.getElementById('crudeMushroom').value*(24/100) + document.getElementById('freshMushroom').value*(12/10) + document.getElementById('exquisiteMushroom').value*(3/10) + document.getElementById('ironOre').value*(5/100) + 15*craftingCostBA)
   var costWithCommision1Item = Math.floor(document.getElementById('frostGrenade').value * 0.95)
-  var costWithCommision1Craft = costWithCommision1Item*2*chancePerfectBO
+  var costWithCommision1Craft = costWithCommision1Item*3*chancePerfectBA
   var craftsPerHour = (60/(30*reducedProductionBA))*3
   var profit = sumCostCraft*craftsPerHour
 
